@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --nav-color: #131c27;
+}
+
+html {
+    font-size: 60%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 2.3rem;
+}
+
+button {
+    padding: 1.5rem 5rem;
+    background: #4c6e97;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    transition: background 1s ease-in-out;
+}
+
+
+button:hover  {
+    background: white;
+    color: var(--nav-color);
+}
+
+li,button,label,input,p {
+    font-size: 1.7rem;
+}
+
+.l-heading {
+    font-size: 4.5rem;
+}
+
+.m-heading {
+    font-size: 3rem;
+    padding: 0rem 2rem;
+    margin: 2rem;
+}
+
+.s-heading {
+    font-size: 1.8rem;
+}
+
+
+.vs-heading {
+    font-size: 1.1rem;
+    padding: 0rem 2rem;
+    margin: 2rem;
+}
+
+
+/* 
+header {
+    background: #333;
+}
+
+nav {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-family: 'Fredoka One', cursive;;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+
+
+
+.nav-item {
+    margin: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+ */
+
+
+
+
+
+
+ .main-header {
+     background: var(--nav-color);
+     color: #fff;
+     position: sticky;
+     top: 0rem;
+     z-index: 4;
+}
+
+nav {
+    /* min-height: 10vh; this is gonna  create some issues regarding responsiveness (height) */
+    /* or just adding padding */
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
+#logo {
+    flex: 1 1 40rem;
+}
+
+nav ul {
+    display: flex;
+    flex: 1 1 33rem; 
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+
+
+/* 
+.showcase-image {
+    background: url('/img/landing-page.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+
+.showcase-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+.punch-line {
+    font-size: 4rem;
+    margin-top: 12rem;
+}
+
+
+.punch-line-description {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.book-now {
+    color: inherit;
+    font-size: 2rem;
+    background: lightseagreen;
+    padding: 1rem 5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+
+
+button:hover,
+button:focus {
+    color: lightseagreen;
+    background: #fff;
+} */
+
+
+
+/*  Showcase  area */
+
+
+.showcase-area {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0,0,0,.2),transparent),url('/img/landing-page.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}       
+
+
+
+.tag-line {
+    margin-top: 2rem;
+}
+.sub-tag-line {
+    margin-top: 2rem;
+    font-weight: normal;
+}
+
+.booking {
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Locations section */
+
+
+
+#locations {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.3),transparent) ,url('/img/new-york-page.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color:  #fff;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+.locations-header {
+    width: 90%;
+    margin: auto;
+
+}
+
+
+
+.cloud {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+
+}
+
+.moving-cloud-1 {
+    animation: cloudAnimation 3s infinite alternate ease-in-out;
+
+}
+
+.moving-cloud-2 {
+    top: 21%;
+    z-index: -1;
+    opacity: 0.5;
+    animation: cloudAnimation 5s infinite alternate ease-in-out;
+
+}
+
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%,-10%); 
+  }
+  to{
+    transform: translate(0%,0%);
+  }
+}
+
+
+
+/*  Cards , benefits section */
+
+
+.benefits-header {
+    background: var(--nav-color);
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 19rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1),
+                0px 20px 20px rgba(0,0,0,0.1);   
+             
+    text-align: center;
+
+}
+
+.cards img{
+    max-width: 15%;
+    margin: 2rem;
+}
+
+.card-image {
+    background: var(--nav-color);
+}
+.cards img {
+    height: 100px;
+}
+
+
+
+.card p,h4 {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sample  destinations */
+
+
+
+
+.destination-tag {
+    background: var(--nav-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+    align-items: center;
+    min-height: 30vh;
+    color: #fff;
+}
+
+/* .moto {
+    font-size: 2rem;
+    margin: 3rem 0rem;
+}
+
+.moto-line {
+    font-size: 2rem;
+    font-weight: bold;
+} */
+
+
+.destinations {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    min-height: 70vh;
+    flex-wrap: wrap;
+    
+}
+
+.destination {
+    flex: 1 1 19rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1),
+                0px 20px 20px rgba(0,0,0,.1);
+}
+
+
+.destination-image {
+
+    background: var(--nav-color);
+}
+
+.destination-image img{
+    max-width: 15%;
+    margin: 2rem;
+    height: 100px;
+}
+
+
+
+
+.destination__heading {
+    font-size: 3rem;
+    margin-top: 4rem;
+    
+}
+
+
+.destination__subheading {
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+
+
+
+/* destination */
+/* Testimonials */
+
+
+section .testimonial-section {
+  min-height: 100vh;
+}
+
+
+
+.testimonial-header {
+    min-height: 30vh;
+    background: var(--nav-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem;
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+.testimonials {
+    background: var(--nav-color);
+    width: 90%;
+    margin:  auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+
+
+.testimonial {
+    background: #fff;
+    border-radius: 9px;
+    flex: 1 1 19rem;
+    min-height: 40vh;
+    padding: 2rem 2rem 3rem 2rem;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(255,255,255,.2),
+                0px 20px 20px rgba(255,255,255,.2);
+}
+
+
+
+.profile__image img{
+    margin-top: -3rem;
+    max-width: 7rem;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0,16),
+    0 3px 6px rgba(0,0,0,0,23);
+}
+
+
+.company {
+    color: #BDBDBD;
+    letter-spacing: .03rem;
+}
+
+.employee__name {
+    margin-top: 1.4rem;
+}
+
+.statement {
+    font-weight: 300;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+#contact{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.5),transparent),url('/img/contact-mountain.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form-wrapper  {
+    background: rgba(19,28,39,.8);
+    width: 60%;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.form-header {
+    text-align: center;
+    padding: 5rem;
+}
+
+
+.form-wrapper label {
+    margin: 0rem 3rem;
+    padding: 2rem 4rem;
+}
+
+
+.form-wrapper button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 5rem;
+    border-radius: 5px;
+}
+
+
+
+.form-wrapper input {
+    padding: 1.2rem 3rem;
+}
+
+.name-form,
+.email-form {
+    padding: 4rem;
+    text-align: center;
+}
+
+
+
+
+
+
+footer {
+    color: #fff;
+    background: rgba(19,28,39,.9);
+}
+
+
+.footer-wrapper {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    min-height: 12vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    flex: 1 1 40rem;
+}
+
+footer ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+    html {
+        font-size: 70%;
+    }
+    nav {
+        text-align: center;
+    } 
+    .nav-item {
+        padding: 1rem;
+    }
+    #logo {
+        padding: 1rem;
+    }
+    .cloud {
+        height: 40rem;
+    }
+  
+    
+  }
